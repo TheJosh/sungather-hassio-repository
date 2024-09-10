@@ -1,0 +1,17 @@
+configuration:
+  host:
+    name: Hostname
+  timeout:
+    name: Timeout
+  scan_interval:
+    name: Scan Interval
+  connection:
+    name: Connection
+  model:
+    name: Model
+  smart_meter:
+    name: Smart Meter
+  custom_mqtt_server:
+    name: Custom MQTT Server
+  log_console:
+    name: Logging Level
