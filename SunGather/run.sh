@@ -11,10 +11,14 @@ fi
 INVERTER_HOST=$(bashio::config 'host')
 INTERVAL=$(bashio::config 'scan_interval')
 CONNECTION=$(bashio::config 'connection')
-MODEL=$(bashio::config 'model' '')
+MODEL=$(bashio::config 'model')
 SMART_METER=$(bashio::config 'smart_meter')
 CUSTOM_MQTT_SERVER=$(bashio::config 'custom_mqtt_server')
 LOG_CONSOLE=$(bashio::config 'log_console')
+
+if [ $MODEL = "null" ]; then
+  MODEL=""
+fi
 
 if [ $CUSTOM_MQTT_SERVER = true ]; then
    echo "Skipping auto MQTT set up, please ensure MQTT settings are configured in /share/SunGather/config.yaml"
