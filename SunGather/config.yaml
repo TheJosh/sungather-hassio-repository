@@ -32,6 +32,7 @@ schema:
   timeout: int(3,60)?
   scan_interval: int(5,600)?
   connection: "list(sungrow|modbus|http)"
+  model: str?
   smart_meter: bool
   custom_mqtt_server: bool
   log_console: "list(OFF|INFO|WARNING|ERROR|DEBUG)?"
